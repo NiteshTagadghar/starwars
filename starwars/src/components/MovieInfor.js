@@ -19,14 +19,28 @@ function MovieInfor() {
     <img
       src={selectedMovie.image}
       alt={selectedMovie.title}
-      className="h-20 w-20 rounded-md mb-4"
+      height="10"
+      width="200"
     />
-    <p className="text-gray-700 mb-2">{selectedMovie.opening_crawl}</p>
+    <p className="text-gray-700 mb-2 ml-2">{selectedMovie.opening_crawl}</p>
 
     </div>
-    <p className="text-sm text-gray-500">
+    <p className="text-sm text-gray-500 mt-6">
       Directed by: <span className="font-semibold">{selectedMovie.director}</span>
     </p>
+
+    <div className='flex mt-4 '>
+      <p className="inline-block border-2  border-blue-500 text-blue-500 px-3 py-1 rounded-lg">
+        {`${selectedMovie.allRatings[0].Source} : ${selectedMovie.allRatings[0].Value}`}
+      </p>
+      <p className="inline-block border-2 mx-2  border-blue-500 text-blue-500 px-3 py-1 rounded-lg">
+        {`${selectedMovie.allRatings[1].Source} : ${selectedMovie.allRatings[1].Value}`}
+      </p>
+      <p className="inline-block border-2 mx-2  border-blue-500 text-blue-500 px-3 py-1 rounded-lg">
+        {`${selectedMovie.allRatings[2].Source} : ${selectedMovie.allRatings[2].Value}`}
+      </p>
+
+    </div>
   </div>
   )
 }
